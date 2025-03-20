@@ -17,8 +17,8 @@ data_gen = ImageDataGenerator(
     fill_mode="nearest"
 )
 
-train_data = data_gen.flow_from_directory(r"C:\Users\pankp\OneDrive\Desktop\pyprojects\Face_mask_detector\dataset\Face Mask Dataset\Train", target_size=(150, 150), batch_size=32, class_mode='binary', subset='training')
-val_data = data_gen.flow_from_directory(r"C:\Users\pankp\OneDrive\Desktop\pyprojects\Face_mask_detector\dataset\Face Mask Dataset\Train", target_size=(150, 150), batch_size=32, class_mode='binary', subset='validation')
+train_data = data_gen.flow_from_directory(r"C:\Users\pankp\OneDrive\Desktop\pyprojects\dataset\Face Mask Dataset\Train", target_size=(150, 150), batch_size=32, class_mode='binary', subset='training')
+val_data = data_gen.flow_from_directory(r"C:\Users\pankp\OneDrive\Desktop\pyprojects\dataset\Face Mask Dataset\Train", target_size=(150, 150), batch_size=32, class_mode='binary', subset='validation')
 
 # Load Pretrained Model (MobileNetV2)
 base_model = MobileNetV2(weights="imagenet", include_top=False, input_shape=(150, 150, 3))
